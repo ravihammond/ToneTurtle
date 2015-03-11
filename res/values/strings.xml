@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- _______________________MAIN_______________________ -->
+    <string name="app_name">ToneTurtle</string>
+    <string name="notifications">Notifications</string>
+    <string name="ringtones">Ringtones</string>
+
+    <!-- ____________________NAME CHOOSER____________________ -->
+    <string name="create_playlist">Create Playlist</string>
+    <string name="Create">Create</string>
+    <string name="Cancel">Cancel</string>
+
+    <!-- _____________________LIST VIEW_____________________ -->
+    <string name="new_playlist">Add Playlist</string>
+    <string name="new_sound">Add Sound</string>
+
+    <!-- ___________________SOUND ACTIVITY___________________ -->
+    <string name="shuffle_button">Shuffle</string>
+    <string name="loop_button">Loop</string>
+    <string name="loop_reset_button">Reset</string>
+    <string name="title_activity_sound">SoundActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

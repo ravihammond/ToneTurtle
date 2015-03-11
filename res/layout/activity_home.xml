@@ -1,0 +1,66 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.android.toneturtle.HomeActivity" >
+    <LinearLayout 
+        android:id="@+id/LinearLayout1"
+        android:background="@drawable/turtle_background"
+        android:layout_width="match_parent"
+        android:layout_weight="0.75"
+    	android:layout_height="0dp"
+    	android:orientation="horizontal">
+		<LinearLayout
+		   	android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"/>	
+		<LinearLayout
+		   	android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:orientation="vertical">
+		    <LinearLayout
+		   		android:layout_width="match_parent"
+		    	android:layout_height="0dp"
+		   		android:layout_weight="1"/>
+		    <Switch
+		    	android:id="@+id/main_switch"
+		    	android:layout_width="wrap_content"
+		   		android:layout_height="wrap_content"/>
+		    <LinearLayout
+		   		android:layout_width="match_parent"
+		    	android:layout_height="0dp"
+		   		android:layout_weight="1"/>
+		</LinearLayout>
+		<LinearLayout
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_weight="0.25"
+    	android:layout_height="0dp"
+    	android:orientation="horizontal">
+
+		<Button
+		    android:id="@+id/ringtones_home_button"
+		    style="android:buttonStyle"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:text="@string/ringtones" />
+
+    	<Button
+    	    android:id="@+id/notification_home_button"
+    	    android:layout_width="0dp"
+    	    android:layout_height="match_parent"
+    	    android:layout_weight="1"
+    	    android:text="@string/notifications"/>
+	</LinearLayout>
+</LinearLayout>

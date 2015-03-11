@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.toneturtle"
+    android:versionCode="1"
+    android:versionName="Alpha 1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="com.devahead.extendingandroidapplication.ToneApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_turtle2"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.NoActionBar" >
+        <activity
+            android:name="com.android.toneturtle.activity.HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.toneturtle.activity.PlaylistNotificationActivity"
+            android:label="@string/notifications"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo" />
+        <activity 
+            android:name="com.android.toneturtle.activity.PlaylistRingtoneActivity"
+            android:label="@string/ringtones"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo" />
+    	<activity
+    	    android:name="com.android.toneturtle.activity.SoundNotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name="com.android.toneturtle.activity.SoundRingtoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name="com.android.toneturtle.activity.NameChooserActivity"
+            android:label="@string/create_playlist"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="paul.arian.fileselector.FileSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="paul.arian.fileselector.FolderSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.toneturtle.activity.PlaylistActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.android.toneturtle.receiver.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="0" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.android.toneturtle.receiver.CallReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.android.toneturtle.receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.toneturtle.RESET_Notifications" />
+                <action android:name="com.android.toneturtle.RESET_Ringtones" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.android.toneturtle.service.LoopReset"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name=".RESET_NOTIFICATION" />
+                <action android:name=".RESET_RINGTONE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.LoopResetNotifications"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.LoopResetRingtones"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.Shuffle"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.ShuffleNotifications"
+            android:exported="false">
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.ShuffleRingtones"
+            android:exported="false">
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.Loop"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".com.android.toneturtle.service.LoopNotifications"          
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.android.toneturtle.service.LoopRingtones"
+            android:exported="false" >
+        </service>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+</manifest>
