@@ -6,7 +6,9 @@
 			The App enables users to create playlists of sounds for either their ringtones or notifactions.
 			depending on the three options shuffle, loop, and rest, 
 			the users ringtone/notifcation sound will change with every call/txt.
+
 **Version:** 1.0 alpha
+
 [Got to the for more information](http://www.leiedm.com/images/NewWebsite_UnderConstruction.jpg)
 
 #### Set Up ####
