@@ -1,31 +1,21 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## ToneTurtle ##
 
-### What is this repository for? ###
+**About:**	This is the source code for an Android Application.
+			The App enables users to create playlists of sounds for either their ringtones or notifactions.
+			depending on the three options shuffle, loop, and rest, 
+			the users ringtone/notifcation sound will change with every call/txt.
+**Version:** 1.0 alpha
+**Website:** [Learn Markdown](http://www.leiedm.com/images/NewWebsite_UnderConstruction.jpg)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo/RaviIsGay)
+# Set Up #
 
-### How do I get set up? ###
+1. Download either android or java android development environment.
+2. Pull everything and set is as your project.
+3. Done!
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-* Ravi is gay
+# Creators #
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* lol more like Gavi
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin or Ravi is gay
-* Other community or team contact
+* Ravi Hammond - Adelaide University
+* Dustin Craggs - Adelaide University
